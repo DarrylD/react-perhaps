@@ -4,13 +4,24 @@
 My very opinionated CRA starting point.  
 
 Installing
-`npm i`
+```
+npm i
+```
 
 Running App
-`npn run start`
+```
+npm run start
+```
 
 Testing
-`npn run test`
+```
+npm run test
+```
+
+:)
+```
+git clone git@github.com:DarrylD/react-perhaps.git && rm -rf .git
+```
 
 Notable Includes
 - [x] Flow type (type checking)
