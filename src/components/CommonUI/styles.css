@@ -1,0 +1,11 @@
+.input:focus{
+    background: #EFF9FF !important;
+    border-top-color: #0063A2 !important;
+    color: #0063A2 !important;
+}
+
+.error,
+.error:focus{
+    border-top-color: #A2001B !important;
+    color: #A2001B !important;
+}

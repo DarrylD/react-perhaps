@@ -1,0 +1,38 @@
+
+$mobile: 'max-width: 500px';
+
+@import url('../../node_modules/skeleton-css/css/normalize.css');
+@import url('../../node_modules/skeleton-css/css/skeleton.css');
+
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color:#666;
+    font-weight: normal;
+    font-style: normal;
+}
+
+button{
+    height: inherit ;
+}
+
+//no need to padding on mobile
+.main{
+    padding: 50px 0;
+
+    @media ($mobile) {
+        padding: 0;
+    }
+}
+
+.container{
+    width: 100% !important;
+}
+
+@media ($mobile) {
+    //no need to padding on mobile
+    .container{
+        padding: 0;
+    }
+}

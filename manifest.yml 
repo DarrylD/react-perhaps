@@ -1,0 +1,6 @@
+---
+applications:
+- name: react-perhaps
+  memory: 512
+  instances: 1
+  random-route: true
