@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
     "custom-react-scripts": "0.0.23",
     "service-mocker": "^1.1.0"
   },
@@ -36,9 +37,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:storybook": "build-storybook -c .storybook -o buildStorybook",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "npm run build && serve build/",
-    "deploy": "now -E"
+    "deploy": "now -E",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   }
 }

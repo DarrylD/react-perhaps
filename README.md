@@ -13,9 +13,29 @@ Running App
 npm run start
 ```
 
+Building App
+```
+npm build start
+```
+
+When in PROD... (build and serve)
+```
+npm build serve
+```
+
 Testing
 ```
 npm run test
+```
+
+Storybook (UI isolation)
+```
+npm run storybook
+```
+
+Build Storybook (UI isolation)
+```
+npm build:storybook
 ```
 
 :)
@@ -30,7 +50,7 @@ Notable Includes
 - [x] Styled Components (better style control)
 - [x] React motion (animations)
 - [x] Axios (http requests)
-- [ ] [Storyboard](https://github.com/storybooks/react-storybook) (ui isolation development)
+- [X] [Storyboard](https://github.com/storybooks/react-storybook) (ui isolation development)
 - [ ] [Tea spoon](https://github.com/jquense/teaspoon) (jquery-ish ui testing)
 - [ ] [service mocker](https://github.com/service-mocker/service-mocker) (serverless server mocking)
     - issues with CRA at the moment
