@@ -51,6 +51,7 @@ Notable Includes
 - [x] React motion (animations)
 - [x] Axios (http requests)
 - [X] [Storyboard](https://github.com/storybooks/react-storybook) (ui isolation development)
+    - [ ] [Testing for storybook] (https://github.com/mthuret/storybook-addon-specifications)
 - [ ] [Tea spoon](https://github.com/jquense/teaspoon) (jquery-ish ui testing)
 - [ ] [service mocker](https://github.com/service-mocker/service-mocker) (serverless server mocking)
     - issues with CRA at the moment
