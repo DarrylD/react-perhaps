@@ -1,15 +1,23 @@
 // @flow
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 
-//NOTE this is useful for sidemenus or whatever needs to be avail through the app
+import { Provider } from 'react-redux'
+
+import Routes from '../../routes'
+import configureStore from '../../configureStore'
+
+const store = configureStore()
 
 export default class App extends Component {
+    componentDidMount() {
+        console.log('App')
+    }
 
     render() {
         return (
-            <div>
-                {this.props.children}
-            </div>
+            <Provider store={store}>
+                <Routes />
+            </Provider>
         )
     }
 }

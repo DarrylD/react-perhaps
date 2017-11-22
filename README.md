@@ -48,7 +48,6 @@ Notable Includes
 - [x] Redux (state container)
 - [x] Rxjs (async stuff)
 - [x] Styled Components (better style control)
-- [x] React motion (animations)
 - [x] Axios (http requests)
 - [X] [Storyboard](https://github.com/storybooks/react-storybook) (ui isolation development)
     - [ ] [Testing for storybook] (https://github.com/mthuret/storybook-addon-specifications)

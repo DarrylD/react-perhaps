@@ -1,0 +1,25 @@
+/* 
+    This should only be used for libs that require additional css.
+    Anything that can't be handled with css-in-js, use this.
+*/
+
+body {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Roboto, sans-serif !important;
+    height: 100%;
+}
+
+html,
+#root,
+#root > [data-reactroot] {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}

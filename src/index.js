@@ -1,41 +1,10 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { browserHistory } from 'react-router'
-//
-import Routes from './routes';
+import './css/index.css'
+// import '../node_modules/skeleton-css/css/normalize.css'
+// import '../node_modules/skeleton-css/css/skeleton.css'
 
-import './css/index.scss';
-//
-//
-// ReactDOM.render(
-//     <Routes history={browserHistory} />,
-//     document.getElementById('root')
-// );
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-/*
-  redux-observable does not automatically add every RxJS operator to
-  the Observable prototype. Because there are many ways to add them,
-  our examples will not include any imports. If you want to add every
-  operator, put import 'rxjs'; in your entry index.js.
-  More info: https://github.com/ReactiveX/rxjs#installation-and-usage
- */
-import 'rxjs';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
-import configureStore from './configureStore';
+import App from './containers/App'
 
-const store = configureStore();
-const history = syncHistoryWithStore(
-    browserHistory,
-    store
-);
-
-ReactDOM.render(
-    <Provider store={store}>
-        <Routes history={history} />
-    </Provider>,
-    document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,20 +1,18 @@
+import React from 'react'
+import { Switch, Route } from 'react-router'
+import { ConnectedRouter } from 'connected-react-router'
 
-import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router'
+import { history } from './configureStore'
 
-import App from './containers/App';
-import NotFound from './containers/NotFound';
-import Start from './containers/Start';
+import Start from './containers/Start'
 
-const Routes = (props) => (
-    <Router {...props} >
-        <Route path="/" component={App}>
+const Routes = () => (
+    <ConnectedRouter history={history}>
+        <Switch>
+            <Route exact path="/" component={Start} />
+            <Route render={() => <div>Miss</div>} />
+        </Switch>
+    </ConnectedRouter>
+)
 
-            <IndexRoute component={Start}/>
-
-            <Route path="*" component={NotFound} />
-        </Route>
-    </Router>
-);
-
-export default Routes;
+export default Routes
