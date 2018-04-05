@@ -1,9 +1,6 @@
 //@flow
 
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
-import styles from './styles.module.scss'
 
 import {
     Card,
@@ -13,40 +10,36 @@ import {
     PageStatus,
 } from '../../components/CommonUI'
 
-import { doPing } from '../../store/ping'
+import { css } from 'styled-components'
 
-@connect(({ isPinging }) => ({ isPinging }), dispatch => ({ dispatch }))
+const red = css`
+    color: red;
+`
+
 export default class Start extends Component {
     state = {
-        doneLoading: false,
-    }
-
-    async bootstrap() {
-        //example dispatches
-        this.props.dispatch(doPing())
-
-        this.setState({
-            doneLoading: !this.state.doneLoading,
-        })
+        loaded: false,
     }
 
     componentDidMount() {
-        this.bootstrap()
+        this.setState({
+            loaded: !this.state.loaded,
+        })
     }
 
     render() {
-        const { doneLoading } = this.state
+        const { loaded } = this.state
 
         //need to handle some statuses before we get to the page
-        if (!doneLoading) return <PageStatus>Loading...</PageStatus>
+        if (!loaded) return <PageStatus>Loading...</PageStatus>
 
         return (
-            <div className={styles.color}>
+            <div>
                 <Center>
                     <Card padding>
                         <Title>New base page</Title>
                         <Title>:]</Title>
-                        <Button>A nice button</Button>
+                        <Button css={red}>A nice button</Button>
                     </Card>
                 </Center>
             </div>

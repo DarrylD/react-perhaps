@@ -10,7 +10,6 @@ const Routes = () => (
     <ConnectedRouter history={history}>
         <Switch>
             <Route exact path="/" component={Start} />
-            <Route render={() => <div>Miss</div>} />
         </Switch>
     </ConnectedRouter>
 )

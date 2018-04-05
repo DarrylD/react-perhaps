@@ -14,6 +14,8 @@ export const Button = styled.button`
     padding: 0.25em 1em;
     border: 2px solid #70a0db;
     border-radius: 3px;
+
+    ${props => props.css};
 `
 
 export const Card = styled.div`
@@ -25,6 +27,10 @@ export const Card = styled.div`
     box-shadow: rgba(0, 0, 0, 0.28) 1px 1px 3px 1px;
 `
 
-export const Title = styled.h1`text-align: center;`
+export const Title = styled.h1`
+    text-align: center;
+`
 
-export const PageStatus = styled(Title)`padding-top: 30;`
+export const PageStatus = styled(Title)`
+    padding-top: 30;
+`

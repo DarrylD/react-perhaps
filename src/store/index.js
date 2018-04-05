@@ -4,7 +4,7 @@ import { routerReducer } from 'react-router-redux'
 import { combineReducers } from 'redux'
 import { createEpicMiddleware, combineEpics } from 'redux-observable'
 
-//want to go through all of our redux modules/ducks and get the reducers
+// want to go through all of our redux modules/ducks and get the reducers
 // that we can can combine automagically
 // https://stackoverflow.com/a/31770875/240993
 // may have some issues with hot module replacement
@@ -19,24 +19,18 @@ const handleEpics = epics => {
     // solved for: https://github.com/redux-observable/redux-observable/issues/58
     if (!Object.keys(epics).length) console.error('No an epic', epics)
 
-    epicList = [
-        ...epicList,
-        ...Object.keys(epics).map(key => epics[key]),
-    ]
+    epicList = [...epicList, ...Object.keys(epics).map(key => epics[key])]
 }
 
 const handleReducers = (reducer, name) => {
     //TODO odd edåge case that needs to be addressed
-    if (typeof reducer !== 'function')
-        console.error('No a reducer', reducer)
+    if (typeof reducer !== 'function') console.error('No a reducer', reducer)
 
     reducerList[name] = reducer
 }
 
 const getReducersAndEpics = key => {
-    const { reducer, epics }: { reducer: any, epics: Object } = req(
-        key
-    )
+    const { reducer, epics }: { reducer: any, epics: Object } = req(key)
 
     //index for what?!
     if (key.match('index.js') || (!reducer || !epics)) return

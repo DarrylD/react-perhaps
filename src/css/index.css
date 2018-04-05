@@ -1,6 +1,7 @@
 /* 
     This should only be used for libs that require additional css.
     Anything that can't be handled with css-in-js, use this.
+    example: a library that does not expose children elements
 */
 
 body {

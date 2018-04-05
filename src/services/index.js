@@ -1,51 +1,24 @@
 // @flow
 import axios from 'axios'
 
-import {apiUrl} from '../settings';
-
-var api = {};
-
-type FetchSomethingTypes = {
-    numberOfStuff:number
-};
-api.fetchSomething = ({numberOfStuff}:FetchSomethingTypes, mock:?boolean) => new Promise( (resolve, reject) => {
-
-    if (mock) {
-
-        const mockData = [
-            {
-                apples: 36,
-                oranges: 36,
-                seeds: 2134,
-            },
-            {
-                apples: 60,
-                oranges: 39,
-                seeds: 32234,
-            },
-            {
-                apples: 84,
-                oranges: 32,
-                seeds: 42344,
-            },
-        ]
-
-        console.warn('Using mock data:', mockData);
-
-        setTimeout(function () {
-            return resolve(mockData)
-        }, 1000);
-
-    } else {
-        return axios.post(`${apiUrl}/fetchSomething`, {numberOfStuff})
-
-            .then(
-                ({data}) => resolve(data),
-                error => reject(error)
-            )
+/**
+    NOTE example
+    type fetchExampleTypes = {
+        title?: string,
     }
+    export const fetchExampleForm = async (options: fetchExampleTypes) => {
+        console.log(options)
 
-});
+        const payload = {
+            //we make the stuff we need here
+        }
 
+        try {
+            const { data } = await axios.post(`${HOST}/v1.1`, payload)
 
-export default api
+            return data
+        } catch (error) {
+            return error
+        }
+    }
+*/
